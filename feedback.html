@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Sneakstore Feedback</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="home.html" class="navbar-brand txt-clr">Sneaker-X</a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav">
+            <a href="home.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About us</a>
+            <a href="sell.html" class="nav-item nav-link">My Products</a>
+            <a href="cart.html" class="nav-item nav-link">My Cart</a>
+          </div>
+         
+          <div class="navbar-nav">
+            <a href="login.html" class="nav-item nav-link txt-clr" id ='logout'>Logout</a>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <div class="card card-outline-secondary container">
+        <div class="card-header">
+          <h3 class="mb-0">Feedback</h3>
+        </div>
+        <div class="card-body">
+          <form autocomplete="off" class="form" role="form">
+            <fieldset>
+              <label class="mb-0" for="name2">Name</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="name2" name="name2"  type="text">
+                </div>
+              </div>
+              <label class="mb-0" for="email2">Contact info</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <input class="form-control" id="email2" name="email2"  type="text">
+                </div>
+              </div>
+              <label class="mb-0" for="message2">Message</label>
+              <div class="row mb-1">
+                <div class="col-lg-12">
+                  <textarea class="form-control" id="message2" name="message2"  rows="6"></textarea>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-lg float-right" type="submit" id="submit-feedback">Send Message</button>
+            </fieldset>
+          </form>
+        </div>
+      </div><!-- /form contact -->
+    </div><!--/col-->
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

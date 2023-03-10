@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>sell</title>
+  </head>
+  <body id = "myproducts">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a href="home.html" class="navbar-brand txt-clr">Sneaker-X</a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarCollapse"
+      >
+        <div class="navbar-nav">
+          <a href="home.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About us</a>
+          <a href="sell.html" class="nav-item nav-link active">My Products</a>
+          <a href="cart.html" class="nav-item nav-link">My Cart</a>
+        </div>
+
+        <div class="navbar-nav">
+          <a href="login.html" class="nav-item nav-link txt-clr" id="logout"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="px-4 px-lg-0">
+      <!-- For demo purpose -->
+      <div class="container text-white py-5 text-center">
+        <h1 class="display-4">My Products</h1>
+      </div>
+      <!-- End -->
+
+      <div class="pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+              <!-- Shopping cart table -->
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="p-2 px-3 text-uppercase">Product</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2 text-uppercase">Price</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2 text-uppercase">Highest Bid</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2 text-uppercase">Remove</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="my-prods">
+                    
+                  </tbody>
+                </table>
+              </div>
+              <!-- End -->
+            </div>
+          </div>
+          <div class="row">
+            <button
+              id="add-product"
+              style="
+                border: 1.5px solid aliceblue;
+                border-radius: 8px;
+                padding: 5px 10px;
+                background: transparent;
+                color: aliceblue;
+                font-weight: 300;
+              "
+            >
+              <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Sneakers
+            </button>
+            <!-- <button id='add-product' style="border: 1.5px solid aliceblue; border-radius:8px; padding: 5px 10px; background: transparent;color: aliceblue; font-weight: 300;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Sneakers </button> -->
+          </div>
+          <br />
+
+          <div class="row">
+            <div class="col-lg-7 mx-auto">
+              <form id="add-prod-form" style="display:none;">
+                <div class="controls">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          id="name"
+                          type="text"
+                          class="form-control"
+                          placeholder="Product name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          id="price"
+                          type="text"
+                          class="form-control"
+                          placeholder="Price"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          id="feature-1"
+                          type="text"
+                          class="form-control"
+                          placeholder="Size eg: UK 8"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="tect" id ="feature2" class="form-control" placeholder ="date of purchase" onfocus="(this.type='date')">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea
+                          id="discription"
+                          class="form-control"
+                          placeholder="Write a discription of the sneakers here. must contain color of shoes."
+                          rows="4"
+                        ></textarea>
+                        <br>
+                        <input type="text" name="img" id="img" placeholder="link of image of product" class="form-control" >
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <input
+                        type="submit"
+                        class="btn btn-success btn-send pt-2 btn-block"
+                        id='upload-product'
+                        style="
+                        border: 1.5px solid aliceblue;
+                        border-radius: 8px;
+                        padding: 5px 10px;
+                        background: transparent;
+                        color: aliceblue;
+                        font-weight: 300;
+                      "
+                        value="Upload Sneakers"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div id="result"></div>
+
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    loadmyProducts();
+  </script>
+  </body>
+</html>

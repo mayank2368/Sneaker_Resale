@@ -1,0 +1,22 @@
+body {
+  background: #00b09b;
+  background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  min-height: 100vh;
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+.txt-clr {
+  color: #109687;
+}
+
+.tdn{
+    
+    color: #000; 
+}
+.tdn:hover{
+    text-decoration: none;
+}
